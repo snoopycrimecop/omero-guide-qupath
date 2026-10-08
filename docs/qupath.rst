@@ -33,11 +33,6 @@ Resources
 - `Video <https://www.youtube.com/watch?v=IffQ18ZQ3mI>`_ showing the usage of the QuPath OMERO extension 
 - QuPath documentation describing the `QuPath OMERO extension <https://qupath.readthedocs.io/en/stable/docs/advanced/omero.html>`_.
 
--  Plugin ``ome-omero-roitool`` **v0.2.4** for import and export of ROIs to or from OMERO using OME-XML format. The ``ome-omero-roitool-xxx.zip`` under Releases also contains the scripts for export and import of ROIs from/to QuPath in OME-XML format. For precise installation steps, see below the ``Step-by-step`` section.
-
-   - https://github.com/glencoesoftware/ome-omero-roitool
-
-
 Step-by-step
 ------------
 
@@ -46,9 +41,9 @@ Step-by-step
 Opening images with ROIs from OMERO in QuPath
 ---------------------------------------------
 
-#. You can go through this workflow directly using the Images from the IDR. Nevertheless, as you cannot write any data directly into IDR during your analysis, you will not be able to successfully import the resulting Annotations and ROIs back into the OMERO in IDR. Thus, you might consider using another OMERO.server which you can write data to and upload this or another RGB large image into it.
+#. You can go through this workflow on any writeable OMERO server. Note that IDR does no longer support the reading of the pixel data via Ice API.
 
-#. In OMERO.web, identify an image in the `idr0018 <https://idr.openmicroscopy.org/search/?query=Name:idr0018>`_ project and the dataset ``Baz1a-14-100-gastrointestinal`` contained in that project.
+#. In OMERO.web, identify an image in the `idr0018 <https://idr.openmicroscopy.org/search/?query=Name:idr0018>`_ project and the dataset ``Baz1a-14-100-gastrointestinal`` contained in that project or any other large pathology image (preferably). Ultimately though, any planar image will do.
 
 #. Select the first image and double-click on it. This will open the image in OMERO.iviewer, in a new tab of your browser.
 
